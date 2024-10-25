@@ -19,7 +19,7 @@ function CurrentDisaster() {
             const data = await response.json();
             console.log(data.data);
             
-            setDisasterData(data.data);
+            setDisasterData(data.data.length);
           } catch (error) {
             setError("Error fetching disaster data: " + error.message);
           }
