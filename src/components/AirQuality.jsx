@@ -12,7 +12,7 @@ function AirQuality() {
     setError("");
 
     try {
-      const url = `http://localhost:5000/air-quality?lat=${lat}&lng=${lng}`;
+      const url = `https://server-weather-rlon.onrender.com/air-quality?lat=${lat}&lng=${lng}`;
       const response = await fetch(url);
 
       if (!response.ok) {
