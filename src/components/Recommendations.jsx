@@ -37,7 +37,7 @@ function Recommendations() {
 
     return (
         <div className="m-5 text-center h-[100vh] overflow-auto your-scroll-container">
-            <h1 className="font-bold text-3xl">
+            <h1 className="font-bold text-3xl text-white">
                 {`Plant these crops in ${months[new Date().getMonth()]} month.`}
             </h1>
             <div className="flex flex-wrap gap-x-4 gap-y-4 justify-around">
