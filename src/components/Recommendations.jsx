@@ -4,19 +4,9 @@ import Card from "./Card";
 function Recommendations() {
     const [crops, setCrops] = useState([]);
     const months = [
-        "January",
-        "February",
-        "March",
-        "April",
-        "May",
-        "June",
-        "July",
-        "August",
-        "September",
-        "October",
-        "November",
-        "December",
-      ];
+        "January", "February", "March", "April", "May", "June",
+        "July", "August", "September", "October", "November", "December",
+    ];
 
     useEffect(() => {
         const fetchCrops = async () => {
@@ -33,7 +23,7 @@ function Recommendations() {
             try {
                 const response = await fetch(`http://127.0.0.1:5000/crops/${season}`);
                 if (!response.ok) {
-                    throw new Error('Failed to fetch crops');
+                    throw new Error("Failed to fetch crops");
                 }
                 const cropsData = await response.json();
                 setCrops(cropsData);
@@ -46,8 +36,10 @@ function Recommendations() {
     }, []);
 
     return (
-        <div className="m-5 text-center">
-            <h1 className="font-bold text-3xl">{`Plant these crops in ${months[new Date().getMonth()]} month.`}</h1>
+        <div className="m-5 text-center h-[100vh] overflow-auto your-scroll-container">
+            <h1 className="font-bold text-3xl">
+                {`Plant these crops in ${months[new Date().getMonth()]} month.`}
+            </h1>
             <div className="flex flex-wrap gap-x-4 gap-y-4 justify-around">
                 {crops.length > 0 ? (
                     crops.map((crop, index) => (
