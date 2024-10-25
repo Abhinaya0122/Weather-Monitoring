@@ -1,7 +1,24 @@
 function WeatherApp() {
-    return(
-        <div className="bg-white shadow-md m-10 p-5 rounded-md">
-            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Consectetur natus nisi rem iusto ipsam quo explicabo ullam facere qui quis, consequatur vero doloremque incidunt atque tempora consequuntur eveniet. Quasi nobis hic laborum iste saepe voluptas quod repudiandae unde in qui. Nisi impedit quibusdam quod ullam mollitia rem doloremque atque sequi necessitatibus unde, dolores quo doloribus fugiat sed ducimus quisquam, repudiandae enim, molestiae nobis et blanditiis quasi eos! Sapiente nam voluptate consequuntur repellendus doloremque quis officiis ab deserunt porro atque? Dolor itaque in minima nisi atque, voluptatum doloribus vero a quo architecto quaerat laboriosam quibusdam dolorum nihil at error veniam aliquid.</p>
+    return (
+        <div className="min-h-screen flex flex-col items-center justify-center p-6 bg-cover bg-center bg-no-repeat">
+            <div className="bg-white bg-opacity-80 shadow-2xl p-10 rounded-xl max-w-lg w-full text-center transition-transform transform hover:scale-105 hover:shadow-2xl duration-300">
+                <h1 className="text-6xl font-extrabold text-indigo-600 mb-6 animate-fade-in">
+                    WeatherApp
+                </h1>
+                <p className="text-gray-700 mb-4 text-xl font-medium">
+                    Stay updated with real-time weather updates and make informed plans.
+                </p>
+                <p className="text-gray-500 mb-8 text-lg">
+                    Your trusted source for accurate forecasts!
+                </p>
+                
+                <button className="bg-indigo-600 text-white py-3 px-6 rounded-full shadow-lg hover:bg-indigo-700 transition-all duration-300 ease-in-out hover:-translate-y-1">
+                    Get Started
+                </button>
+            </div>
+            <footer className="mt-10 text-gray-400 text-sm">
+                <p>© 2024 WeatherApp. All rights reserved.</p>
+            </footer>
         </div>
     );
 }
