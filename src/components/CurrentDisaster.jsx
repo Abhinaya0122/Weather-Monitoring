@@ -12,7 +12,7 @@ function CurrentDisaster() {
         navigator.geolocation.getCurrentPosition(async (position) => {
           const { latitude, longitude } = position.coords;
           try {
-            const response = await fetch(`https://weather-monitoring-we31.onrender.com/disaster-detection?lat=${latitude}&lng=${longitude}`);
+            const response = await fetch(`https://server-weather-rlon.onrender.com/disaster-detection?lat=${latitude}&lng=${longitude}`);
             if (!response.ok) {
               throw new Error("Failed to fetch disaster data");
             }
