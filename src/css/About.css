@@ -1,0 +1,150 @@
+.about-container {
+    padding: 2rem;
+    background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTCTwWlGTEpNBwGdh09fiGf2gWi-Bi2KJo4eA&s");
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: white;
+    margin: 0; /* Ensure there's no margin on sides */
+    overflow: hidden;
+    width: 100%; /* Ensure full width */
+}
+
+.about-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 4rem;
+    margin-bottom: 5rem;
+    width: 100%;
+    box-shadow: #4f4e4e;
+    height: auto;
+    padding: 40px;
+    flex-wrap: wrap; /* Make items wrap on small screens */
+}
+
+.about-heading-container, .about-image-container {
+    flex: 1;
+}
+
+.about-heading-container {
+    text-align: left;
+}
+
+.about-image-container {
+    text-align: right;
+}
+
+.about-image {
+    max-width: 100%;
+    height: auto;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.about-services {
+    display: flex;
+    flex-direction: row;
+    gap: 1.5rem;
+    flex-wrap: wrap; /* Allow wrapping on smaller screens */
+    justify-content: center; /* Center services on smaller screens */
+}
+
+/* Service cards styling */
+.service-card {
+    flex: 1;
+    padding: 1.5rem;
+    background-color: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 12px;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    cursor: pointer;
+    margin-bottom: 20px;
+    min-width: 250px; /* Set a minimum width for the cards */
+}
+
+.service-card:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+.service-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+    color: #fff;
+}
+
+.service-card p {
+    font-size: 1rem;
+    color: #e0e0e0;
+}
+
+/* Responsive Design */
+
+/* For tablets (medium screens) */
+@media (max-width: 1024px) {
+    .about-top {
+        flex-direction: column; /* Stack heading and image */
+        text-align: center;
+    }
+
+    .about-heading-container, .about-image-container {
+        flex: 1 1 100%;
+        padding: 10px;
+    }
+
+    .about-image-container {
+        text-align: center; /* Center the image on small screens */
+    }
+
+    .about-services {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .service-card {
+        width: 100%; /* Make services take full width */
+        max-width: 600px; /* Add a max-width for large tablets */
+    }
+}
+
+/* For small devices (phones) */
+@media (max-width: 600px) {
+    .about-container {
+        padding: 1rem;
+    }
+
+    .about-top {
+        margin-bottom: 2rem;
+        gap: 1rem;
+    }
+
+    .about-heading-container h2 {
+        font-size: 1.5rem; /* Reduce heading size */
+    }
+
+    .about-heading-container p {
+        font-size: 1rem; /* Reduce paragraph size */
+    }
+
+    .about-image {
+        width: 100%;
+        height: auto;
+        margin-bottom: 1rem; /* Add space below image */
+    }
+
+    .about-services {
+        flex-direction: column;
+    }
+
+    .service-card {
+        padding: 1rem;
+        margin-bottom: 1rem;
+    }
+
+    .service-card h3 {
+        font-size: 1.2rem;
+    }
+
+    .service-card p {
+        font-size: 0.9rem;
+    }
+}
