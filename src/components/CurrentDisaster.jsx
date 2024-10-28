@@ -19,7 +19,7 @@ function CurrentDisaster() {
             const data = await response.json();
             console.log(data.data);
             
-            setDisasterData(data.data.length);
+            setDisasterData(data.data); // Set the full data instead of length
           } catch (error) {
             setError("Error fetching disaster data: " + error.message);
           }
@@ -39,6 +39,10 @@ function CurrentDisaster() {
       <main className="flex flex-col items-center pt-20">
         {loading && <p>Loading disaster information...</p>}
         {error && <p className="text-red-500">{error}</p>}
+        {disasterData.length === 0 && !loading && !error && (
+  <p style={{ color: 'darkgreen' }}>No disasters reported for your location.</p>
+)}
+
         {disasterData.length > 0 && <DisasterCard disasterData={disasterData} />}
       </main>
     </div>
