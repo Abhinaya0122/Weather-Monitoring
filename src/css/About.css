@@ -1,6 +1,6 @@
 .about-container {
     padding: 2rem;
-    background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTCTwWlGTEpNBwGdh09fiGf2gWi-Bi2KJo4eA&s");
+        /* background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTCTwWlGTEpNBwGdh09fiGf2gWi-Bi2KJo4eA&s"); */
     background-repeat: no-repeat;
     background-size: cover;
     color: white;
@@ -8,6 +8,8 @@
     overflow: hidden;
     width: 100%; /* Ensure full width */
 }
+
+
 
 .about-top {
     display: flex;
