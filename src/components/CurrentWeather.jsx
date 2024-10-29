@@ -16,7 +16,7 @@ function CurrentWeather() {
           const { latitude, longitude } = position.coords;
 
           try {
-            const url = `/current-weather?lat=${latitude}&lng=${longitude}`;
+            const url = `https://server-weather-rlon.onrender.com/current-weather?lat=${latitude}&lng=${longitude}`;
             const result = await fetch(url);
             const data = await result.json();
 
