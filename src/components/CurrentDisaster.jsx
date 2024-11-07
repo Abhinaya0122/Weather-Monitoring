@@ -40,7 +40,7 @@ function CurrentDisaster() {
         {loading && <p>Loading disaster information...</p>}
         {error && <p className="text-red-500">{error}</p>}
         {disasterData.length === 0 && !loading && !error && (
-  <p style={{ color: 'darkgreen' }}>No disasters reported for your location.</p>
+  <p style={{ color: 'darkgreen' }} className="font-bold text-3xl">No disasters reported for your location.</p>
 )}
 
         {disasterData.length > 0 && <DisasterCard disasterData={disasterData} />}

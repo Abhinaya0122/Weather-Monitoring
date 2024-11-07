@@ -1,28 +1,23 @@
 import React from "react";
 
-function DisasterAlertCard({ disasterData }) {
+function DisasterCard({ disasterData }) {
   return (
-    <div className="bg-white opacity-70 p-6 rounded-lg shadow-lg max-w-sm">
-      <h2 className="text-2xl font-bold mb-4">Disaster Alerts</h2>
-      {disasterData.length > 0 ? (
-        disasterData.map((disaster, index) => (
-          <div key={index} className="mb-4">
-            <h3 className="text-lg font-semibold">{disaster.event_name}</h3>
-            <p><strong>Event Type:</strong> {disaster.event_type}</p>
-            <p><strong>Date:</strong> {new Date(disaster.date).toLocaleString()}</p>
-            <p><strong>Location:</strong> Latitude: {disaster.lat}, Longitude: {disaster.lng}</p>
-            <p><strong>Severity:</strong> {disaster.details.severity}</p>
-            <p><strong>Status:</strong> {disaster.details.event_status}</p>
-            <p><strong>Details:</strong> {disaster.details.event_description}</p>
-            <p><strong>Instructions:</strong> {disaster.details.instruction}</p>
-            <p><strong>Source:</strong> {disaster.source}</p>
-          </div>
-        ))
-      ) : (
-        <p>No disaster information available.</p>
-      )}
+    <div className="grid gap-6 p-6 max-w-md mx-auto bg-white rounded-lg shadow-md">
+      {disasterData.map((disaster, index) => (
+        <div key={index} className="bg-gray-100 p-4 rounded-lg shadow-md transition-transform transform hover:scale-105">
+          <h2 className="text-xl font-bold mb-2 text-gray-800">{disaster.event_name}</h2>
+          <p><strong>Type:</strong> {disaster.event_type}</p>
+          <p><strong>Date:</strong> {new Date(disaster.date).toLocaleString()}</p>
+          <p><strong>Continent:</strong> {disaster.continent}</p>
+          <p><strong>Latitude:</strong> {disaster.lat}</p>
+          <p><strong>Longitude:</strong> {disaster.lng}</p>
+          <p><strong>Source Event ID:</strong> {disaster.source_event_id}</p>
+          <p><strong>Event ID:</strong> {disaster.event_id}</p>
+          <p className="text-xs text-gray-500">Reported on: {new Date(disaster.created_time).toLocaleString()}</p>
+        </div>
+      ))}
     </div>
   );
 }
 
-export default DisasterAlertCard;
+export default DisasterCard;
